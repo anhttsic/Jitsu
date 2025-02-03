@@ -1,0 +1,27 @@
+{
+  "android": {
+    "webDriverSession": {
+      "capabilities": {
+        "alwaysMatch": {
+          "platformName": "Android",
+          "appium:deviceName": "emulator-5554",
+          "appium:app": "#(appPath)",
+          "appium:automationName": "UIAutomator2",
+          "appium:autoGrantPermissions": true,
+          "appium:noReset": false
+        },
+        "firstMatch": [
+          {}
+        ]
+      }
+    },
+    "desiredCapabilities": {
+      "deviceName": "emulator-5554",
+      "app": "#(appPath)",
+      "platformName": "Android",
+      "automationName": "UIAutomator2",
+      "autoGrantPermissions": true,
+      "noReset": false
+    }
+  }
+}

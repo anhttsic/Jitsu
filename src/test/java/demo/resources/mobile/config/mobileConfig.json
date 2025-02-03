@@ -1,0 +1,6 @@
+{
+  "type": "#(driverType)",
+  "webDriverUrl": "#(mobileDriverUrl)",
+  "start": false,
+  "httpConfig": { "readTimeout": 30000 }
+}

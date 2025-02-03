@@ -1,0 +1,8 @@
+{
+  "searchCity": "//input[@placeholder='Search city']",
+  "searchBtn": "//button[@type='submit']",
+  "searchResult": "//ul[@class='search-dropdown-menu']/li",
+  "displayCityName": "//div[@class='section-content']//h2",
+  "displayDateTime": "//div[@class='current-temp']/../preceding-sibling::*/span",
+  "displayTemperature": "//div[@class='current-temp']/span"
+}
