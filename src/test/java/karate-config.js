@@ -18,6 +18,7 @@ function fn() {
     dataPath: 'classpath:demo/resources/data/',
     mobileDriverUrl: karate.properties['karate.mobileDriverUrl'] || 'http://127.0.0.1:4723',
     desiredCapabilities: karate.properties['karate.desiredCapabilities'] || 'android'
+    personalToken: karate.properties['karate.gitToken'] || null
   }
 
   var driverConfig = karate.call('classpath:driver-config.js', { config: config });

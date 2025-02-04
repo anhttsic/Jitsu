@@ -37,7 +37,7 @@ Feature: Github Api
     * header content-type = 'application/json'
     * header accept = '*/*'
     # Personal Token will expire in 30 days
-    * header Authorization = 'Bearer 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'
+    * header Authorization = 'Bearer ' + personalToken
     * text query =
       """
         {"query":"{repository(name: \"<repoName>\", owner: \"<owner>\") {watchers {totalCount}}}"}
