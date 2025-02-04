@@ -1,0 +1,1 @@
+Feature: Common action mobile

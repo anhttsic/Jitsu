@@ -15,6 +15,7 @@ function fn() {
     webPage: 'classpath:demo/pages/web/',
     mobileConfig: 'classpath:demo/resources/mobile/config/',
     mobilePage: 'classpath:demo/pages/mobile/',
+    dataPath: 'classpath:demo/resources/data/',
     mobileDriverUrl: karate.properties['karate.mobileDriverUrl'] || 'http://127.0.0.1:4723',
     desiredCapabilities: karate.properties['karate.desiredCapabilities'] || 'android'
   }
@@ -23,8 +24,9 @@ function fn() {
   config = karate.merge(config, driverConfig);
 
   karate.configure('driver', config.driverConfig)
-  config.utils = karate.callSingle('classpath:demo/features/Utils.feature')
-  config.appPath = config.utils.path.PROJECT_RESOURCE + 'mobile/app/app-staging-release.apk'
+  config.utils = karate.callSingle('classpath:demo/features/Utils.feature', { 'dataPath': config.dataPath })
+  config.appPath = karate.properties['karate.appPath'] || config.utils.path.PROJECT_RESOURCE + 'mobile/app/app-staging-release.apk'
 
+  karate.log('Done config !')
   return config;
 }

@@ -3,7 +3,7 @@ Feature: Web
   Background:
     Given driver weatherUrl
 
-  @ui
+  @web
   Scenario Outline: Demo UI
     * call read(webPage + 'WeatherHomePage.feature@search_city') {searchValue: '<searchValue>'}
     * call read(webPage + 'WeatherHomePage.feature@verify_display_city_name') {expected: '<searchValue>'}

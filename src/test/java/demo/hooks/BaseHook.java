@@ -11,15 +11,13 @@ public class BaseHook implements RuntimeHook {
     @Override
     public void afterScenario(ScenarioRuntime sr) {
         if (sr.caller.depth == 0) {
-            ScenarioEngine.get().evalKarateExpression("screenshot()");
+            if (sr.engine.getAllVariablesAsMap().get("driver") != null)
+                ScenarioEngine.get().evalKarateExpression("screenshot()");
         }
     }
 
     @Override
     public boolean beforeStep(Step step, ScenarioRuntime sr) {
-        System.out.println(step.getPrefix());
-        System.out.println(step.getFeature().getName());
-        System.out.println(step.getText());
         return true;
     }
 
