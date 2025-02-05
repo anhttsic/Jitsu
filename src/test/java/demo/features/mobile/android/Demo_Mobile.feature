@@ -7,13 +7,14 @@ Feature: Mobile app Jitsu
 
   @mobile
   Scenario: Demo mobile app
-    * waitFor("//android.widget.EditText[@hint='USERNAME/EMAIL']").click().input(user.username)
-    * waitFor("//android.widget.EditText[@hint='PASSWORD']").click().input(user.password)
-    * waitFor("@Log In").click()
-    * waitFor("//*[contains(@content-desc,'Profile')]").click()
-    * waitFor("@Tutorials").click()
-    * waitFor("@Assigned Route").click()
+    * call read(mobilePage + 'LoginPage.feature@login') {user: #(user)}
+    * call read(mobilePage + 'HomePage.feature@goToProfile')
+    * call read(mobilePage + 'ProfilePage.feature@clickTutorials')
+    * call read(mobilePage + 'ProfilePage.feature@verifyDisplaySection')
+    * call read(mobilePage + 'ProfilePage.feature@clickAssignRoute')
+    * call read(mobilePage + 'Common.feature@get_toast_msg')
+    * print toastMsg
+    * assert (toastMsg == 'Tutorial is successfully created') || (toastMsg == 'A tutorial has previously been created in Active Assignment Tab')
     * optional("@Start Tutorial").click()
-    * waitFor("@Quit tutorial").click()
-    * waitFor("@Yes, quit tutorial").click()
-    * delay(5000)
+    * call read(mobilePage + 'Common.feature@click_element') {xpath: '@Quit tutorial'}
+    * call read(mobilePage + 'Common.feature@click_element') {xpath: '@Yes, quit tutorial'}

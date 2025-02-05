@@ -1,10 +1,10 @@
 Feature: Web
 
   Background:
-    Given driver weatherUrl
+    * call read(webPage + 'WeatherHomePage.feature@openWebPage')
 
   @web
-  Scenario Outline: Demo UI
+  Scenario Outline: Demo Web
     * call read(webPage + 'WeatherHomePage.feature@search_city') {searchValue: '<searchValue>'}
     * call read(webPage + 'WeatherHomePage.feature@verify_display_city_name') {expected: '<searchValue>'}
     * call read(webPage + 'WeatherHomePage.feature@verify_display_datetime') {format: '<dateFormat>'}

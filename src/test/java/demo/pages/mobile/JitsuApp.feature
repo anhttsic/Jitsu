@@ -11,4 +11,5 @@ Feature: Jitsu mobile app
       | webDriverUrl | mobileDriverUrl     |
     * configure driver = driverConfig
     * driver config
-    * configure retry = {count: 3, interval: 2000}
+    * def MobileFactory = Java.type('demo.function.mobile.MobileFactory')
+    * def mobile = MobileFactory.init(driver)

@@ -3,6 +3,12 @@ Feature: Weather homepage
   Background:
     * def homePage = read(webPage + 'WeatherHomePage.json')
 
+  @openWebPage
+  Scenario: Open chrome
+    * driver weatherUrl
+    * def WebAction = Java.type('demo.function.WebAction')
+    * def web = new WebAction(driver)
+
   @search_city
   Scenario: search city
     * input(homePage.searchCity, searchValue)

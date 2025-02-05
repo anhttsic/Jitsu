@@ -1,0 +1,5 @@
+{
+  "username": "//android.widget.EditText[@hint='USERNAME/EMAIL']",
+  "password": "//android.widget.EditText[@hint='PASSWORD']",
+  "loginBtn": "@Log In"
+}
