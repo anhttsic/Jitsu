@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 
 public class TestRunner {
 
-    //mvn clean test -Dtest=TestRunner "-Dkarate.options=--tags @mobile" -Dkarate.appPath=C:\Users\Admin\Downloads\app-staging-release.apk
+    //mvn clean test -Dtest=TestRunner "-Dkarate.options=--tags @mobile" -Dkarate.deviceName="emulator-5554" -Dkarate.appPath=C:\Users\Admin\Downloads\app-staging-release.apk
     //mvn clean test -Dtest=TestRunner "-Dkarate.options=--tags @web" -Dkarate.headless=true
-    //mvn clean test -Dtest=TestRunner "-Dkarate.options=--tags @api" -Dkarate.gitToken=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
+    //mvn clean test -Dtest=TestRunner "-Dkarate.options=--tags @api" -Dkarate.gitToken=
 
     @Test
     void testRunner() {

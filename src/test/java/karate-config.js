@@ -36,6 +36,7 @@ function fn() {
   karate.configure('driver', config.driverConfig)
   config.utils = karate.callSingle('classpath:demo/features/Utils.feature', { 'dataPath': config.dataPath })
   config.appPath = karate.properties['karate.appPath'] || 'C:\\Users\\Admin\\Downloads\\app-staging-release.apk'
+  config.deviceName = karate.properties['karate.deviceName'] || 'emulator-5554'
 
   karate.log('Done config !')
   return config;

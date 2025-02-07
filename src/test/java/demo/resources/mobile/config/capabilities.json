@@ -4,7 +4,7 @@
       "capabilities": {
         "alwaysMatch": {
           "platformName": "Android",
-          "appium:deviceName": "emulator-5554",
+          "appium:deviceName": "#(deviceName)",
           "appium:app": "#(appPath)",
           "appium:automationName": "UIAutomator2",
           "appium:autoGrantPermissions": true,
@@ -16,7 +16,7 @@
       }
     },
     "desiredCapabilities": {
-      "deviceName": "emulator-5554",
+      "deviceName": "#(deviceName)",
       "app": "#(appPath)",
       "platformName": "Android",
       "automationName": "UIAutomator2",
