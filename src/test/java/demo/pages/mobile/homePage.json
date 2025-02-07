@@ -1,3 +1,7 @@
 {
-  "profileBtn": "//*[contains(@content-desc,'Profile')]"
+  "profileBtn": "//*[contains(@content-desc,'Profile')]",
+  "activeAssignment": "@Active Assignment",
+  "startTutorial": "@Start Tutorial",
+  "quitTutorial": "@Quit tutorial",
+  "yesQuit": "@Yes, quit tutorial"
 }

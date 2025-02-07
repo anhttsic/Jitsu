@@ -11,7 +11,7 @@ function fn() {
   karate.configure('logPrettyResponse', true);
   karate.configure('connectTimeout', 5000);
   karate.configure('readTimeout', 5000);
-  karate.configure('retry', { count: 3, interval: 2000 });
+  karate.configure('retry', { count: 7, interval: 2000 });
 
   var config = {
     env: env,

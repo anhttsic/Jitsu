@@ -15,6 +15,7 @@
     </appender>
 
     <logger name="com.intuit.karate" level="DEBUG"/>
+    <logger name="demo.function.hack" level="DEBUG"/>
 
     <root level="info">
         <appender-ref ref="STDOUT" />
