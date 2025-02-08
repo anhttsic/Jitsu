@@ -11,3 +11,5 @@
     + Install SDK, open android simulator and get device id (normally is emulator-5554)
     + Download the apk file from "https://drive.google.com/file/d/1dUgCO1UbBsJhyNwshT6OhKXWTjP4prPI/view?usp=sharing"
     + Run maven command "mvn clean test -Dtest=TestRunner "-Dkarate.options=--tags @mobile" -Dkarate.deviceName="emulator-5554" -Dkarate.appPath=(path to apk file downloaded)"
+
+4. Link record run demo "https://drive.google.com/file/d/1SBQptRepY-00F31jIcPy2zpWdHkZyUij/view?usp=sharing"
